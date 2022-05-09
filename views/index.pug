@@ -1,0 +1,123 @@
+doctype html
+html
+  head
+    title Prasad Dance Academy
+    style
+      include ../static/style.css
+      include ../static/styleContact.css
+  body
+    nav#navbar
+        ul
+            div#logo 
+                img(src = "/static/img/logo.png")
+                | HDA
+            li #[a(href="#introSection") Home] 
+            li #[a(href="#aboutSection") About] 
+            li #[a(href="#studio") Studio] 
+            li #[a(href="#sponsorSection") Our Sponsors] 
+            li #[a(href="#contact") Contact Us] 
+    
+    section#introSection
+        div Welcome to Prasad's Dance Academy
+        div.small Eat Sleep Dance Repeat 
+
+    section#aboutSection
+        h2 About Us  
+        div.card
+            h3 Live to Dance
+            div.card-box
+                div.card-img 
+                    img(src = "/static/img/1.png")
+                div.card-content
+                    p Live Shows on Big Platforms.
+        div.card
+            h3 Hip Hop
+            div.card-box
+                div.card-img 
+                    img(src = "/static/img/2.png")
+                div.card-content
+                    p Hip hop dance is a range of street dance styles.
+        div.card
+            h3 Expertised Teaching
+            div.card-box
+                div.card-img 
+                    img(src = "/static/img/3.png")
+                div.card-content
+                    p We teach you under Trained Professionals.
+        
+        div.info
+            h3 Address :-
+            p.
+              Kavri residency,
+            p.
+              vadgaon,
+            p.
+              Pune-4110442
+            p.
+              Mobile NO:- 9876452310
+
+    section#studio
+        h2 Studio Gallery
+        div#studiogallery  
+            div.slider
+                div.slides
+                    //- <!--radio buttons start-->
+                    input(type="radio" name="radio-btn" id="radio1")
+                    input(type="radio" name="radio-btn" id="radio2")
+                    input(type="radio" name="radio-btn" id="radio3")
+                    input(type="radio" name="radio-btn" id="radio4")
+                    //- <!--radio buttons end-->
+
+                    //- <!--slide images start-->
+                    div.slide.first
+                        img(src="/static/adi.jpg")
+                    div.slide
+                        img(src="/static/try1.jpg") 
+                    div.slide
+                        img(src="/static/try3.jpg")
+                    div.slide
+                        img(src="/static/try4.jpg")
+
+                    //- <!--slide images end-->
+
+                    //- <!--automatic navigation start-->
+                    div.navigation-auto
+                        div.auto-btn1
+                        div.auto-btn2
+                        div.auto-btn3                
+                        div.auto-btn4                
+
+            //- <!--manual navigation start-->
+            div.navigation-manual
+                 label(for="radio1" class="manual-btn")
+                 label(for="radio2" class="manual-btn")
+                 label(for="radio3" class="manual-btn")
+                 label(for="radio4" class="manual-btn")
+          
+
+    section#sponsorSection
+        h2 Our Sponsors 
+        div#sponsors 
+           img(src="/static/sp10.png",alt="Sponsor Image", class="spImage")
+           img(src="/static/sp3.png",alt="Sponsor Image", class="spImage")
+           img(src="/static/sp2.jpg",alt="Sponsor Image", class="spImage")
+           img(src="/static/sp5.png",alt="Sponsor Image", class="spImage")
+
+    
+    block content 
+      div.container#contact
+        h1 Contact Us
+        form(action="/index.pug",method = "post" class="myForm")
+            input(type="text",class="myInput",name="name",placeholder="Enter your name") 
+            input(type="phone",class="myInput",name="phone",placeholder="Enter your phone number") 
+            input(type="email",class="myInput",name="email",placeholder="Enter your Email Id") 
+            input(type="text",class="myInput",name="address",placeholder="Enter your Address") 
+            input(type="text",class="myInput",name="desc",placeholder="Enter your Concern") 
+            button(class="btn")
+                |Submit
+
+    footer#footer 
+        | Copyright © 2022 PrasadDanceAcademy.com | All rights reserved
+    
+    script
+      include ../static/index.js
